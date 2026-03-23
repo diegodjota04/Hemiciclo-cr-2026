@@ -1,0 +1,401 @@
+[
+  {
+    "id": 1,
+    "nombre": "Nogui Acosta Jaén",
+    "partido": "PPSO",
+    "provincia": "San José",
+    "genero": "M"
+  },
+  {
+    "id": 2,
+    "nombre": "Kattia Alejandra Mora Montoya",
+    "partido": "PPSO",
+    "provincia": "San José",
+    "genero": "F"
+  },
+  {
+    "id": 3,
+    "nombre": "Stephan Brunner Neibig",
+    "partido": "PPSO",
+    "provincia": "San José",
+    "genero": "M"
+  },
+  {
+    "id": 4,
+    "nombre": "Mayuli del Carmen Ortega Guzmán",
+    "partido": "PPSO",
+    "provincia": "San José",
+    "genero": "F"
+  },
+  {
+    "id": 5,
+    "nombre": "Gonzalo Alberto Ramírez Zamora",
+    "partido": "PPSO",
+    "provincia": "San José",
+    "genero": "M"
+  },
+  {
+    "id": 6,
+    "nombre": "Anna Katharina Muller Castro",
+    "partido": "PPSO",
+    "provincia": "San José",
+    "genero": "F"
+  },
+  {
+    "id": 7,
+    "nombre": "Antonio Barzuna Thompson",
+    "partido": "PPSO",
+    "provincia": "San José",
+    "genero": "M"
+  },
+  {
+    "id": 8,
+    "nombre": "Sadie Esmeralda Britton González",
+    "partido": "PPSO",
+    "provincia": "San José",
+    "genero": "F"
+  },
+  {
+    "id": 9,
+    "nombre": "José Miguel Villalobos Umaña",
+    "partido": "PPSO",
+    "provincia": "Alajuela",
+    "genero": "M"
+  },
+  {
+    "id": 10,
+    "nombre": "Zaira Murillo Marín",
+    "partido": "PPSO",
+    "provincia": "Alajuela",
+    "genero": "F"
+  },
+  {
+    "id": 11,
+    "nombre": "Gerardo Bogantes Rivera",
+    "partido": "PPSO",
+    "provincia": "Alajuela",
+    "genero": "M"
+  },
+  {
+    "id": 12,
+    "nombre": "Grethel María Ávila Vargas",
+    "partido": "PPSO",
+    "provincia": "Alajuela",
+    "genero": "F"
+  },
+  {
+    "id": 13,
+    "nombre": "Wilson Alfredo Jiménez Cordero",
+    "partido": "PPSO",
+    "provincia": "Alajuela",
+    "genero": "M"
+  },
+  {
+    "id": 14,
+    "nombre": "Kattia María Ulate Alvarado",
+    "partido": "PPSO",
+    "provincia": "Alajuela",
+    "genero": "F"
+  },
+  {
+    "id": 15,
+    "nombre": "Fernando Obaldía Álvarez",
+    "partido": "PPSO",
+    "provincia": "Alajuela",
+    "genero": "M"
+  },
+  {
+    "id": 16,
+    "nombre": "Cindy María Blanco González",
+    "partido": "PPSO",
+    "provincia": "Cartago",
+    "genero": "F"
+  },
+  {
+    "id": 17,
+    "nombre": "Robert Johan Barrantes Camacho",
+    "partido": "PPSO",
+    "provincia": "Cartago",
+    "genero": "M"
+  },
+  {
+    "id": 18,
+    "nombre": "Yara Vanessa Jiménez Fallas",
+    "partido": "PPSO",
+    "provincia": "Cartago",
+    "genero": "F"
+  },
+  {
+    "id": 19,
+    "nombre": "Marta Eugenia Esquivel Rodríguez",
+    "partido": "PPSO",
+    "provincia": "Heredia",
+    "genero": "F"
+  },
+  {
+    "id": 20,
+    "nombre": "Juan Manuel Quesada Espinoza",
+    "partido": "PPSO",
+    "provincia": "Heredia",
+    "genero": "M"
+  },
+  {
+    "id": 21,
+    "nombre": "Nayuribe Guadamuz Rosales",
+    "partido": "PPSO",
+    "provincia": "Guanacaste",
+    "genero": "F"
+  },
+  {
+    "id": 22,
+    "nombre": "Daniel Asdrubal Siezar Cárdenas",
+    "partido": "PPSO",
+    "provincia": "Guanacaste",
+    "genero": "M"
+  },
+  {
+    "id": 23,
+    "nombre": "Cindy Dayana Murillo Artavia",
+    "partido": "PPSO",
+    "provincia": "Guanacaste",
+    "genero": "F"
+  },
+  {
+    "id": 24,
+    "nombre": "Royner Mora Ruiz",
+    "partido": "PPSO",
+    "provincia": "Puntarenas",
+    "genero": "M"
+  },
+  {
+    "id": 25,
+    "nombre": "María Isabel Camareno Camareno",
+    "partido": "PPSO",
+    "provincia": "Puntarenas",
+    "genero": "F"
+  },
+  {
+    "id": 26,
+    "nombre": "Ariel Alfonso Mora Fallas",
+    "partido": "PPSO",
+    "provincia": "Puntarenas",
+    "genero": "M"
+  },
+  {
+    "id": 27,
+    "nombre": "Osvaldo Artavia Carballo",
+    "partido": "PPSO",
+    "provincia": "Limón",
+    "genero": "M"
+  },
+  {
+    "id": 28,
+    "nombre": "Kristel Lizeth Ward Hudson",
+    "partido": "PPSO",
+    "provincia": "Limón",
+    "genero": "F"
+  },
+  {
+    "id": 29,
+    "nombre": "Reynaldo Arias Mora",
+    "partido": "PPSO",
+    "provincia": "Limón",
+    "genero": "M"
+  },
+  {
+    "id": 30,
+    "nombre": "Kathia Calvo Cruz",
+    "partido": "PPSO",
+    "provincia": "Limón",
+    "genero": "F"
+  },
+  {
+    "id": 31,
+    "nombre": "Óscar Cascante Rodríguez",
+    "partido": "PPSO",
+    "provincia": "San José",
+    "genero": "M"
+  },
+  {
+    "id": 32,
+    "nombre": "Álvaro Ramírez Bogantes",
+    "partido": "PLN",
+    "provincia": "San José",
+    "genero": "M"
+  },
+  {
+    "id": 33,
+    "nombre": "Iztarú Alfaro Guerrero",
+    "partido": "PLN",
+    "provincia": "San José",
+    "genero": "F"
+  },
+  {
+    "id": 34,
+    "nombre": "Rafael Ángel Vargas Brenes",
+    "partido": "PLN",
+    "provincia": "San José",
+    "genero": "M"
+  },
+  {
+    "id": 35,
+    "nombre": "Andrea Patricia Valverde Palavicini",
+    "partido": "PLN",
+    "provincia": "San José",
+    "genero": "F"
+  },
+  {
+    "id": 36,
+    "nombre": "Marco Francisco Badilla Chavarría",
+    "partido": "PLN",
+    "provincia": "San José",
+    "genero": "M"
+  },
+  {
+    "id": 37,
+    "nombre": "Diana Murillo Murillo",
+    "partido": "PLN",
+    "provincia": "Alajuela",
+    "genero": "F"
+  },
+  {
+    "id": 38,
+    "nombre": "Eder Francisco Hernández Ulloa",
+    "partido": "PLN",
+    "provincia": "Alajuela",
+    "genero": "M"
+  },
+  {
+    "id": 39,
+    "nombre": "Karen Tatiana Alfaro Jiménez",
+    "partido": "PLN",
+    "provincia": "Alajuela",
+    "genero": "F"
+  },
+  {
+    "id": 40,
+    "nombre": "Janice Sandí Meza",
+    "partido": "PLN",
+    "provincia": "Cartago",
+    "genero": "F"
+  },
+  {
+    "id": 41,
+    "nombre": "Salvador Padilla Villalobos",
+    "partido": "PLN",
+    "provincia": "Cartago",
+    "genero": "M"
+  },
+  {
+    "id": 42,
+    "nombre": "Víctor Manuel Hidalgo Solís",
+    "partido": "PLN",
+    "provincia": "Heredia",
+    "genero": "M"
+  },
+  {
+    "id": 43,
+    "nombre": "Ángela Ileana Aguilar Vargas",
+    "partido": "PLN",
+    "provincia": "Heredia",
+    "genero": "F"
+  },
+  {
+    "id": 44,
+    "nombre": "Ronald Alberto Campos Villegas",
+    "partido": "PLN",
+    "provincia": "Guanacaste",
+    "genero": "M"
+  },
+  {
+    "id": 45,
+    "nombre": "Karol Vanessa Matamoros Montoya",
+    "partido": "PLN",
+    "provincia": "Guanacaste",
+    "genero": "F"
+  },
+  {
+    "id": 46,
+    "nombre": "Norjelens María Lobo Vargas",
+    "partido": "PLN",
+    "provincia": "Puntarenas",
+    "genero": "F"
+  },
+  {
+    "id": 47,
+    "nombre": "Jesús Antonio Calderón Calderón",
+    "partido": "PLN",
+    "provincia": "Puntarenas",
+    "genero": "M"
+  },
+  {
+    "id": 48,
+    "nombre": "Abril Gordienko López",
+    "partido": "PUSC",
+    "provincia": "San José",
+    "genero": "F"
+  },
+  {
+    "id": 49,
+    "nombre": "Mangell Mc Lean Villalobos",
+    "partido": "PLN",
+    "provincia": "Limón",
+    "genero": "M"
+  },
+  {
+    "id": 50,
+    "nombre": "José María Villalta Florez-Estrada",
+    "partido": "FA",
+    "provincia": "San José",
+    "genero": "M"
+  },
+  {
+    "id": 51,
+    "nombre": "Vianey Briyith Mora Umaña",
+    "partido": "FA",
+    "provincia": "San José",
+    "genero": "F"
+  },
+  {
+    "id": 52,
+    "nombre": "Antonio Trejos Mazariegos",
+    "partido": "FA",
+    "provincia": "San José",
+    "genero": "M"
+  },
+  {
+    "id": 53,
+    "nombre": "Edgardo Araya Pineda",
+    "partido": "FA",
+    "provincia": "Alajuela",
+    "genero": "M"
+  },
+  {
+    "id": 54,
+    "nombre": "Sigrid Segura Rojas",
+    "partido": "FA",
+    "provincia": "Alajuela",
+    "genero": "F"
+  },
+  {
+    "id": 55,
+    "nombre": "Joselyn Fabiola Sáenz Núñez",
+    "partido": "FA",
+    "provincia": "Cartago",
+    "genero": "F"
+  },
+  {
+    "id": 56,
+    "nombre": "María Eugenia Román Mora",
+    "partido": "FA",
+    "provincia": "Heredia",
+    "genero": "F"
+  },
+  {
+    "id": 57,
+    "nombre": "Claudia Dobles Camargo",
+    "partido": "CAC",
+    "provincia": "San José",
+    "genero": "F"
+  }
+]
