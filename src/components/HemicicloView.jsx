@@ -143,8 +143,12 @@ export default function HemicicloView({ diputados, filteredIds, assignments, onA
   const dragIdRef = useRef(null)
   const isDragging = useRef(false)
   const dropRef = useRef(null)
+  const lastDragEnd = useRef(0)
 
   const handleFinishDrag = useCallback(() => {
+    if (isDragging.current) {
+      lastDragEnd.current = Date.now();
+    }
     const fromId = dragIdRef.current; const target = dropRef.current;
     if (isDragging.current && fromId && target !== null) {
       if (typeof target === 'string' && target.startsWith('pres-')) {
@@ -241,6 +245,7 @@ export default function HemicicloView({ diputados, filteredIds, assignments, onA
                   <div 
                     onMouseDown={e => handleStartDrag(e, dip.id)} 
                     onTouchStart={e => handleStartDrag(e, dip.id)} 
+                    onClickCapture={e => { if (Date.now() - lastDragEnd.current < 200) { e.stopPropagation(); e.preventDefault(); } }}
                     className="w-full h-full cursor-grab z-10 touch-none">
                     <SeatCard 
                       diputado={dip} assignment={assignments[dip.id]} 
@@ -270,6 +275,7 @@ export default function HemicicloView({ diputados, filteredIds, assignments, onA
                 onMouseEnter={() => { dropRef.current = dip.id; setDropHighlight(dip.id) }}
                 onMouseDown={e => handleStartDrag(e, dip.id)}
                 onTouchStart={e => handleStartDrag(e, dip.id)}
+                onClickCapture={e => { if (Date.now() - lastDragEnd.current < 200) { e.stopPropagation(); e.preventDefault(); } }}
                 style={{
                   opacity: isDragged ? 0.3 : 1,
                   transition: 'opacity 0.2s',
