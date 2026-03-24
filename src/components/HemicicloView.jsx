@@ -167,10 +167,54 @@ export default function HemicicloView({ diputados, filteredIds, assignments, onA
   }, []);
 
   const handleStartDrag = (e, id) => {
+    const isTouch = e.type === 'touchstart';
     dragIdRef.current = id;
-    const onMove = (ev) => { isDragging.current = true; setGhostPos({ x: ev.clientX, y: ev.clientY }); }
-    const onUp = () => { window.removeEventListener('mousemove', onMove); window.removeEventListener('mouseup', onUp); handleFinishDrag(); }
-    window.addEventListener('mousemove', onMove); window.addEventListener('mouseup', onUp);
+    
+    const onMove = (ev) => {
+      if (isTouch && ev.cancelable) {
+        ev.preventDefault(); // Prevent scrolling while dragging
+      }
+      isDragging.current = true;
+      
+      const clientX = isTouch ? ev.touches[0].clientX : ev.clientX;
+      const clientY = isTouch ? ev.touches[0].clientY : ev.clientY;
+      
+      setGhostPos({ x: clientX, y: clientY });
+      
+      if (isTouch) {
+        const el = document.elementFromPoint(clientX, clientY);
+        const dropZone = el?.closest('[data-drop-id]');
+        if (dropZone) {
+          const dropId = dropZone.getAttribute('data-drop-id');
+          dropRef.current = dropId;
+          setDropHighlight(dropId);
+        } else {
+          dropRef.current = null;
+          setDropHighlight(null);
+        }
+      }
+    };
+    
+    const onEnd = () => {
+      if (isTouch) {
+        window.removeEventListener('touchmove', onMove);
+        window.removeEventListener('touchend', onEnd);
+        window.removeEventListener('touchcancel', onEnd);
+      } else {
+        window.removeEventListener('mousemove', onMove);
+        window.removeEventListener('mouseup', onEnd);
+      }
+      handleFinishDrag();
+    };
+    
+    if (isTouch) {
+      window.addEventListener('touchmove', onMove, { passive: false });
+      window.addEventListener('touchend', onEnd);
+      window.addEventListener('touchcancel', onEnd);
+    } else {
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('mouseup', onEnd);
+    }
   }
 
   return (
@@ -184,7 +228,9 @@ export default function HemicicloView({ diputados, filteredIds, assignments, onA
             const dip = presidencia[i] ? dipMap[presidencia[i]] : null
             const isOver = dropHighlight === `pres-${i}`
             return (
-              <div key={i} onMouseEnter={() => { dropRef.current = `pres-${i}`; setDropHighlight(`pres-${i}`) }}
+              <div key={i} 
+                data-drop-id={`pres-${i}`}
+                onMouseEnter={() => { dropRef.current = `pres-${i}`; setDropHighlight(`pres-${i}`) }}
                 style={{ width: 140, height: 90 }}
                 className={`relative rounded-xl border-dashed border-2 p-2 flex items-center justify-center transition-all duration-300
                   ${isOver ? 'border-cyan-400 bg-cyan-400/10 shadow-[0_0_20px_rgba(34,211,238,0.4)]' : 'border-white/20'}`}>
@@ -192,7 +238,10 @@ export default function HemicicloView({ diputados, filteredIds, assignments, onA
                 <div className="absolute inset-2 border border-dashed border-white/10 rounded-lg pointer-events-none"></div>
                 
                 {dip ? (
-                  <div onMouseDown={e => handleStartDrag(e, dip.id)} className="w-full h-full cursor-grab z-10">
+                  <div 
+                    onMouseDown={e => handleStartDrag(e, dip.id)} 
+                    onTouchStart={e => handleStartDrag(e, dip.id)} 
+                    className="w-full h-full cursor-grab z-10 touch-none">
                     <SeatCard 
                       diputado={dip} assignment={assignments[dip.id]} 
                       onAssign={data => onAssign(dip.id, data)}
@@ -217,12 +266,15 @@ export default function HemicicloView({ diputados, filteredIds, assignments, onA
             
             return (
               <g key={dip.id}
+                data-drop-id={dip.id}
                 onMouseEnter={() => { dropRef.current = dip.id; setDropHighlight(dip.id) }}
                 onMouseDown={e => handleStartDrag(e, dip.id)}
+                onTouchStart={e => handleStartDrag(e, dip.id)}
                 style={{
                   opacity: isDragged ? 0.3 : 1,
                   transition: 'opacity 0.2s',
-                  cursor: 'grab'
+                  cursor: 'grab',
+                  touchAction: 'none'
                 }}
               >
                 <SeatCard 
