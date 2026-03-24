@@ -7,11 +7,11 @@
     "genero": "M"
   },
   {
-    "id": 24,
-    "nombre": "Kattia Alejandra Mora Montoya",
+    "id": 2,
+    "nombre": "Royner Mora Ruiz",
     "partido": "PPSO",
-    "provincia": "San José",
-    "genero": "F"
+    "provincia": "Puntarenas",
+    "genero": "M"
   },
   {
     "id": 3,
@@ -161,11 +161,11 @@
     "genero": "F"
   },
   {
-    "id": 2,
-    "nombre": "Royner Mora Ruiz",
+    "id": 24,
+    "nombre": "Kattia Alejandra Mora Montoya",
     "partido": "PPSO",
-    "provincia": "Puntarenas",
-    "genero": "M"
+    "provincia": "San José",
+    "genero": "F"
   },
   {
     "id": 25,
