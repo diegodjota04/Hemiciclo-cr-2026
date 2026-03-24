@@ -89,11 +89,11 @@ export default function SeatCard({ diputado, assignment, onAssign, isFiltered, l
   const fontSizeSub = baseFontSizeSub * getScale(textSub, 8, 0.7);
 
   const InnerContent = () => (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-0.5 p-1 select-none"
-      style={{ opacity: isFiltered ? 0.2 : 1 }}>
-      <div className="mb-0.5 relative">
+    <div className="w-full h-full flex flex-col items-center justify-center gap-0.5 p-1 select-none pointer-events-none"
+      style={{ opacity: isFiltered ? 0.2 : 1, userSelect: 'none', WebkitUserSelect: 'none', WebkitUserDrag: 'none' }}>
+      <div className="mb-0.5 relative pointer-events-none">
         {assignment?.photo
-          ? <img src={assignment.photo} className="rounded-full object-cover border-[1.5px]" style={{ width: photoSize, height: photoSize, borderColor: colors.badge }} />
+          ? <img src={assignment.photo} draggable="false" className="rounded-full object-cover border-[1.5px] pointer-events-none" style={{ width: photoSize, height: photoSize, borderColor: colors.badge, userSelect: 'none', WebkitUserDrag: 'none' }} />
           : <AvatarPlaceholder genero={diputado.genero} size={photoSize} color={colors.badge} />}
       </div>
       <div className="flex flex-col items-center text-center w-full leading-tight">

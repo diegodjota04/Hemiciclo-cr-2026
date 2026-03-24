@@ -222,7 +222,7 @@ export default function HemicicloView({ diputados, filteredIds, assignments, onA
   }
 
   return (
-    <div ref={containerRef} className="w-full relative flex flex-col items-center p-8 bg-slate-950/20 rounded-3xl overflow-hidden min-h-[800px]">
+    <div ref={containerRef} className="w-full relative flex flex-col items-center p-8 bg-slate-950/20 rounded-3xl overflow-hidden min-h-[800px] select-none" style={{ WebkitUserSelect: 'none', userSelect: 'none', WebkitUserDrag: 'none' }}>
 
       {/* 1. Mesa Directiva Estilo Moderno */}
       <div className="z-20 mb-6 flex flex-col items-center w-full max-w-4xl mx-auto py-4 px-6 rounded-2xl border border-white/5 bg-[#0f1525]/80 backdrop-blur" style={{boxShadow: 'inset 0 0 40px rgba(0,0,0,0.5)'}}>
