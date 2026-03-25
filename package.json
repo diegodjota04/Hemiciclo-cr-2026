@@ -5,7 +5,7 @@
   "homepage": "https://diegodjota04.github.io/Hemiciclo-cr-2026",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
@@ -13,6 +13,9 @@
     "start-backend": "node server.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
