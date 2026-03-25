@@ -9,7 +9,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start-backend": "node server.js"
   },
   "dependencies": {
     "react": "^18.3.1",

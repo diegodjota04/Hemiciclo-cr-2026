@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import diputadosData from './data/diputados.json'
-import { useLocalStorage } from './hooks/useLocalStorage'
+import { useNetworkStorage } from './hooks/useNetworkStorage'
 import FiltersBar from './components/FiltersBar'
 import SliderControl from './components/SliderControl'
 import HemicicloView from './components/HemicicloView'
@@ -24,9 +24,9 @@ function buildVisibleDiputados(allocation) {
 }
 
 export default function App() {
-  const [sliderCount, setSliderCount] = useLocalStorage('hemiciclo_slider', 57)
-  const [allocation, setAllocation] = useLocalStorage('hemiciclo_allocation', () => computeDefaultAllocation(57))
-  const [assignments, setAssignments] = useLocalStorage('hemiciclo_assignments', {})
+  const [sliderCount, setSliderCount] = useNetworkStorage('hemiciclo_slider', 57)
+  const [allocation, setAllocation] = useNetworkStorage('hemiciclo_allocation', () => computeDefaultAllocation(57))
+  const [assignments, setAssignments] = useNetworkStorage('hemiciclo_assignments', {})
   const [filters, setFilters] = useState({ provincia: '', genero: '', partido: '' })
   const [showAllocation, setShowAllocation] = useState(true)
 
